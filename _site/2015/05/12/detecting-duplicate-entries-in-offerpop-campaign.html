@@ -64,15 +64,27 @@
        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-      ga('create', 'UA-62770742-1', 'auto');
-      ga('send', 'pageview');
+      //ga('create', 'UA-62770742-1', 'auto');
+      //ga('send', 'pageview');
 
     </script>
   </head>
 
   <body>
     <section>
-      {{ content }}
+      <h1 id="detecting-duplicate-entries-in-offerpop-campaigns">Detecting Duplicate Entries in OfferPop Campaigns</h1>
+
+<p>I wound up having to do some anomaly detection for a giveaway campaign that recently completed.
+By all accounts it was really successful! Sadly, some people didn’t play
+by the rules and entered many more times than once. One person entered
+more than 2000 times!</p>
+
+<p>Below is a simple bash script to detect a fairly high percentage of fraudulent
+entries in just under a second:</p>
+
+<script src="https://gist.github.com/brycemcd/de6ef86346d035858164.js"></script>
+
+
     </section>
   </body>
 </html>
