@@ -8,8 +8,8 @@ permalink: plotting-user-retention-curves-in-R
 
 This post was inspired by Dan Croak ([@croaky](https://twitter.com/Croaky))
  over at [The Giant Robots Blog](https://robots.thoughtbot.com/create-a-retention-curve-with-mixpanel-and-google-sheets).
-His approach to user retention is spot on and his walk through for user
-retention graphs are very useful for building consumer facing product.
+His approach to user retention is spot-on and his walk through for user
+retention graphs are very useful for building a consumer facing product.
 
 [I tweeted](https://twitter.com/brycemcd/status/617433218627858432) that
 a user retention curve is easier to explain to other people in the
@@ -63,7 +63,7 @@ target='_blank'>
 </a>
 
 Note that `X0.weeks.later` isn't that interesting for this product. So,
-cut it can be cut out by simply subsetting the data:
+it can be cut out by simply subsetting the data:
 
 `retention %>% filter(t != 'X0.weeks.later' & weeks_ago != 27)`
 
@@ -76,4 +76,4 @@ This script is certainly going to be useful to me as we continue to
 build [Cricket's Circle](https://www.cricketscircle.com). I hope it's
 useful for you as you're building whatever web or native product you're
 building. Let me know what you're working on and, as always,
-improvements are always welcome.
+improvements are always welcome. Thanks Dan for the inspiration.
