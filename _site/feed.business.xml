@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title> - Business</title>
+		<title>Bryce McDonnell - Business</title>
 		<description>Posts categorized with 'business'</description>
 		<link>http://www.brycemcdonnell.com</link>
 		<atom:link href="http://www.brycemcdonnell.com/feed.business.xml" rel="self" type="application/rss+xml" />
