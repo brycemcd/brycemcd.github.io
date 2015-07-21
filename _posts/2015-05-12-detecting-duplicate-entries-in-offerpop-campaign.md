@@ -1,5 +1,9 @@
 ---
 layout: default
+category: development
+summary:
+  Offerpop does not automatically screen for duplicate entries.
+  This script normalizes entries and then shows you the duplicates
 ---
 
 # Detecting Duplicate Entries in OfferPop Campaigns

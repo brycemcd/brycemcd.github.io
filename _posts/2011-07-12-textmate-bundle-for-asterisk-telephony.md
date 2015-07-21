@@ -1,6 +1,9 @@
 ---
 permalink: textmate-bundle-for-asterisk-telephony
+category: development
+layout: posts
 ---
+
 I’ve been getting more and more familiar with Asterisk I’ve been
 blindly editing the configuration files in TextMate with no context
 highlighting. This produced lots of really unnecessary errors. So, [I

@@ -1,3 +1,5 @@
 url: 'http://www.brycemcdonnell.com'
 sass:
   style: compressed
+gems:
+  - jekyll-sitemap
