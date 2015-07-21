@@ -1,7 +1,11 @@
 ---
-layout: default
+layout: posts
 category: business, data-science
 permalink: plotting-user-retention-curves-in-R
+summary:
+  Quickly and easily build a user retention graph using R and an
+  export from Mixpanel
+og_image_url: https://s3-us-west-2.amazonaws.com/bme-blog/retention-filtered.png
 ---
 
 # Plotting User Retention Curves In R

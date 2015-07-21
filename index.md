@@ -1,6 +1,9 @@
 ---
 layout: default
 ---
+{% for repository in site.github.public_repositories %}
+    * [{{ repository.name }}]({{ repository.html_url }})
+{% endfor %}
 <div id="header">
   <h1> Bryce McDonnell </h1>
   <h2> Entrepreneur, Tech Leader, <3 Data </h2>
