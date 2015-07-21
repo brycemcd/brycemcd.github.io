@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title> - Business</title>
+		<description>Posts categorized with 'business'</description>
+		<link>http://www.brycemcdonnell.com</link>
+		<atom:link href="http://www.brycemcdonnell.com/feed.business.xml" rel="self" type="application/rss+xml" />
+		
+			<item>
+				<title>Plotting User Retention Curves In R</title>
+        <description>&lt;h1 id=&quot;plotting-user-retention-curves-in-r&quot;&gt;Plotting User Retention Curves In R&lt;/h1&gt;
+
+&lt;p&gt;This post was inspired by Dan Croak (&lt;a href=&quot;https://twitter.com/Croaky&quot;&gt;@croaky&lt;/a&gt;)
+ over at &lt;a href=&quot;https://robots.thoughtbot.com/create-a-retention-curve-with-mixpanel-and-google-sheets&quot;&gt;The Giant Robots Blog&lt;/a&gt;.
+His approach to user retention is spot-on and his walk through for user
+retention graphs are very useful for building a consumer facing product.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://twitter.com/brycemcd/status/617433218627858432&quot;&gt;I tweeted&lt;/a&gt; that
+a user retention curve is easier to explain to other people in the
+business in a way that is actionable.&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Create a Retention Curve with Mixpanel and Google Sheets -
+much easier to grok than the waterfall charts imho &lt;a href=&quot;https://t.co/NvWfUFfHSV&quot;&gt;https://t.co/NvWfUFfHSV&lt;/a&gt;&lt;/p&gt;&amp;mdash;
+Bryce (@brycemcd) &lt;a href=&quot;https://twitter.com/brycemcd/status/617433218627858432&quot;&gt;July 4,
+2015&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async=&quot;&quot; src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Taking this one step further, I think that building such a curve should
+be mindless to generate. Dan’s tutorial was straightforward but making
+it automatic will decrease the time to generate the graph. Making a user
+retention graph a no-brainer will make it much more likely that it gets
+generated at a regular interval and shared with other people in the
+business. In particular, manually changing the colors and building a
+graph in Google Sheets is fairly arduous.&lt;/p&gt;
+
+&lt;h2 id=&quot;moar-automation&quot;&gt;MOAR AUTOMATION&lt;/h2&gt;
+
+&lt;p&gt;Dan’s (and now my) goal of producing user retention curves can be better
+automated. All it takes is R (or RStudio) and the downloaded csv from
+Mixpanel (see Dan’s post for the format of the csv).&lt;/p&gt;
+
+&lt;p&gt;After about an hour of playing (yes, it was super fun) in R, the process
+can be better automated with &lt;a href=&quot;https://gist.github.com/brycemcd/5d6c9e77cd8597ff7027&quot;&gt;this
+gist&lt;/a&gt;.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/brycemcd/5d6c9e77cd8597ff7027.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;The script produces the following graphs (click to zoom in):&lt;/p&gt;
+
+&lt;h3 id=&quot;all-data&quot;&gt;All Data&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://s3-us-west-2.amazonaws.com/bme-blog/retention-all.png&quot; target=&quot;_blank&quot;&gt;
+  &lt;img src=&quot;https://s3-us-west-2.amazonaws.com/bme-blog/retention-all.png&quot; width=&quot;100%&quot; alt=&quot;User Retention - All&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;filtered-data&quot;&gt;Filtered Data&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://s3-us-west-2.amazonaws.com/bme-blog/retention-filtered.png&quot; target=&quot;_blank&quot;&gt;
+  &lt;img src=&quot;https://s3-us-west-2.amazonaws.com/bme-blog/retention-filtered.png&quot; width=&quot;100%&quot; alt=&quot;User Retention - filtered&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Note that &lt;code&gt;X0.weeks.later&lt;/code&gt; isn’t that interesting for this product. So,
+it can be cut out by simply subsetting the data:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;retention %&amp;gt;% filter(t != &#39;X0.weeks.later&#39; &amp;amp; weeks_ago != 27)&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;the-future&quot;&gt;The Future&lt;/h2&gt;
+
+&lt;p&gt;The next step is to automatically pull the data into R from the Mixpanel
+API. It should be relatively straightforward.&lt;/p&gt;
+
+&lt;p&gt;This script is certainly going to be useful to me as we continue to
+build &lt;a href=&quot;https://www.cricketscircle.com&quot;&gt;Cricket’s Circle&lt;/a&gt;. I hope it’s
+useful for you as you’re building whatever web or native product you’re
+building. Let me know what you’re working on and, as always,
+improvements are always welcome. Thanks Dan for the inspiration.&lt;/p&gt;
+</description>
+				<pubDate>Sun, 05 Jul 2015 00:00:00 -0400</pubDate>
+				<link>http://www.brycemcdonnell.com/plotting-user-retention-curves-in-R?utm_source=rss&amp;utm_medium=rss&amp;utm_medium=blogrss</link>
+				<guid isPermaLink="true">http://www.brycemcdonnell.com/plotting-user-retention-curves-in-R?utm_source=rss&amp;utm_medium=rss&amp;utm_medium=blogrss</guid>
+			</item>
+		
+	</channel>
+</rss>

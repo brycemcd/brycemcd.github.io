@@ -1,6 +1,8 @@
 ---
 layout: posts
-category: business, data-science
+category:
+  - data-science
+  - business
 permalink: plotting-user-retention-curves-in-R
 summary:
   Quickly and easily build a user retention graph using R and an
