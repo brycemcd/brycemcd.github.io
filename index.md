@@ -40,3 +40,23 @@ target="_blank">LinkedIn</a>
   <li> <a href="{{ post.url }}">{{ post.title }}</a> </li>
 {% endfor %}
 </ul>
+
+## Internet I've Been Reading
+<ul id="reading-list">
+</ul>
+
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="https://api.trello.com/1/client.js?key=f3b1593d9870a335c7acdc2844a866ea"></script>
+<script>
+  Trello.get("lists/5516b2060968d9feeeb00b8c/cards?limit=15&attachments=true", function(cards) {
+    $.each(cards, function(ix, card) {
+      var link = $("<a>")
+        .attr({href: card.attachments[0].url, target: "_blank"})
+        .addClass("card")
+        .text(card.name);
+      var dateRead = new Date(card.dateLastActivity);
+      //link.appendTo($cards);
+      $('#reading-list').append($("<li>").append(link).append(" read: " + dateRead.toLocaleString()) );
+    });
+  });
+</script>
