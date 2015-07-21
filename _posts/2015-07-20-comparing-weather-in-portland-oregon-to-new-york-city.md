@@ -8,6 +8,11 @@ og_image_url: https://s3-us-west-2.amazonaws.com/bme-blog/weather_comparison_pdx
 ---
 
 # Comparing Weather In Portland Oregon To New York City
+<a href="https://twitter.com/share" class="twitter-share-button"
+data-via="brycemcd" data-size="large" data-related="brycemcd"
+data-text="Comparing weather data using ggplot in R"
+data-count="none" data-hashtags="rstats,weather">Share This On Twitter</a>
+
 
 I recently travelled back to my home town of Portland, Oregon and a
 debate quickly broke out comparing the weather between where I live now
@@ -112,3 +117,8 @@ graphical analysis.
 
 <script
 src="https://gist.github.com/brycemcd/8a46239172271019f81e.js"></script>
+
+<a href="https://twitter.com/share" class="twitter-share-button"
+data-via="brycemcd" data-size="large" data-related="brycemcd"
+data-text="Comparing weather data using ggplot in R"
+data-count="none" data-hashtags="rstats,weather">Share This On Twitter</a>
