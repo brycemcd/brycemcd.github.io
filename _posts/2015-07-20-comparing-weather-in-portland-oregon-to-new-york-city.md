@@ -6,8 +6,6 @@ summary:
   similarity the climates
 og_image_url: https://s3-us-west-2.amazonaws.com/bme-blog/weather_comparison_pdx_to_nyc.png
 ---
-
-# Comparing Weather In Portland Oregon To New York City
 <a href="https://twitter.com/share" class="twitter-share-button"
 data-via="brycemcd" data-size="large" data-related="brycemcd"
 data-text="Comparing weather data using ggplot in R"

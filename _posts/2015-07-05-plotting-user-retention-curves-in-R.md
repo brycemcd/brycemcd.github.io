@@ -10,8 +10,6 @@ summary:
 og_image_url: https://s3-us-west-2.amazonaws.com/bme-blog/retention-filtered.png
 ---
 
-# Plotting User Retention Curves In R
-
 This post was inspired by Dan Croak ([@croaky](https://twitter.com/Croaky))
  over at [The Giant Robots Blog](https://robots.thoughtbot.com/create-a-retention-curve-with-mixpanel-and-google-sheets).
 His approach to user retention is spot-on and his walk through for user

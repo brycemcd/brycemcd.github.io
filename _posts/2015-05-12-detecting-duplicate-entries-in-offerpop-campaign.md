@@ -6,8 +6,6 @@ summary:
   This script normalizes entries and then shows you the duplicates
 ---
 
-# Detecting Duplicate Entries in OfferPop Campaigns
-
 I wound up having to do some anomaly detection for a giveaway campaign that recently completed.
 By all accounts it was really successful! Sadly, some people didn't play
 by the rules and entered many more times than once. One person entered

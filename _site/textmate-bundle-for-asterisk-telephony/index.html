@@ -20,14 +20,14 @@
       }
 
       @media(min-width: 601px) {
-        section {
+        section, article {
           width: 50%;
           margin: 50px auto;
         }
       }
 
       @media(max-width: 600px) {
-        section {
+        section, article {
           width: 95%;
           margin: 20px auto;
         }
@@ -57,6 +57,25 @@
       code {
         background-color: #CCCCCC;
         padding: 0 5px;
+      }
+
+      .author, .pubdate, .cats {
+        font-size: small;
+        float: left;
+      }
+
+      .author, .pubdate {
+        width: 60%;
+      }
+
+      .cats {
+        margin: 0; padding: 0;
+        float: right;
+        width: 20%;
+      }
+
+      .articleBody {
+        clear: both;
       }
     </style>
     <link type="text/css" href="/stylesheets/application.css" rel='stylesheet'/>
@@ -90,21 +109,34 @@
     <link rel="alternate" type="application/rss+xml" title="RSS Posts In Data Science" href="http://www.brycemcdonnell.com/feed.data-science.xml" />
     <link rel="alternate" type="application/rss+xml" title="RSS Posts In Business" href="http://www.brycemcdonnell.com/feed.business.xml" />
 
+    <link rel="canonical" href="http://www.brycemcdonnell.com/textmate-bundle-for-asterisk-telephony" />
+
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-      ga('create', 'UA-62770742-1', 'auto');
-      ga('send', 'pageview');
+      //ga('create', 'UA-62770742-1', 'auto');
+      //ga('send', 'pageview');
 
     </script>
   </head>
 
   <body>
-    <section>
-      <p>I’ve been getting more and more familiar with Asterisk I’ve been
+    <article itemscope itemtype="http://schema.org/TechArticle">
+      <h1 itemprop="name"> Textmate Bundle For Asterisk Telephony </h1>
+      <ul class='cats'>
+        
+          <li itemprop="about"> development </li>
+        
+      </ul>
+      <div class='author' itemprop="author"> By Bryce McDonnell</div>
+      <div class='pubdate' itemprop="datePublished" date="2011-07-12 00:00:00 -0400"> July, 12 2011 </div>
+
+      <div class="articleBody" itemprop="articleBody">
+        <hr />
+        <p>I’ve been getting more and more familiar with Asterisk I’ve been
 blindly editing the configuration files in TextMate with no context
 highlighting. This produced lots of really unnecessary errors. So, <a href="http://www.github.com/brycem/asterisk-textmate-bundle">I
 decided to build a bundle from
@@ -113,7 +145,13 @@ scratch</a>.</p>
 <p>It’s definitely a work in progress and I’d appreciate any work anyone
 else would like to put into it</p>
 
-    </section>
+      </div>
+
+      <div id='permalink'>
+        permalink: <br />
+        <a href="http://www.brycemcdonnell.com/textmate-bundle-for-asterisk-telephony"><span itemprop='url'>http://www.brycemcdonnell.com/textmate-bundle-for-asterisk-telephony</span></a>
+      </div>
+    </article>
     <script>!function(d,s,id){var
     js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document,
     'script', 'twitter-wjs');</script>

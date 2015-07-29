@@ -8,8 +8,7 @@
 		
 			<item>
 				<title>Comparing Weather In Portland Oregon To New York City</title>
-        <description>&lt;h1 id=&quot;comparing-weather-in-portland-oregon-to-new-york-city&quot;&gt;Comparing Weather In Portland Oregon To New York City&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&quot;https://twitter.com/share&quot; class=&quot;twitter-share-button&quot; data-via=&quot;brycemcd&quot; data-size=&quot;large&quot; data-related=&quot;brycemcd&quot; data-text=&quot;Comparing weather data using ggplot in R&quot; data-count=&quot;none&quot; data-hashtags=&quot;rstats,weather&quot;&gt;Share This On Twitter&lt;/a&gt;&lt;/p&gt;
+        <description>&lt;p&gt;&lt;a href=&quot;https://twitter.com/share&quot; class=&quot;twitter-share-button&quot; data-via=&quot;brycemcd&quot; data-size=&quot;large&quot; data-related=&quot;brycemcd&quot; data-text=&quot;Comparing weather data using ggplot in R&quot; data-count=&quot;none&quot; data-hashtags=&quot;rstats,weather&quot;&gt;Share This On Twitter&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;I recently travelled back to my home town of Portland, Oregon and a
 debate quickly broke out comparing the weather between where I live now
@@ -121,9 +120,7 @@ graphical analysis.&lt;/p&gt;
 		
 			<item>
 				<title>Plotting User Retention Curves In R</title>
-        <description>&lt;h1 id=&quot;plotting-user-retention-curves-in-r&quot;&gt;Plotting User Retention Curves In R&lt;/h1&gt;
-
-&lt;p&gt;This post was inspired by Dan Croak (&lt;a href=&quot;https://twitter.com/Croaky&quot;&gt;@croaky&lt;/a&gt;)
+        <description>&lt;p&gt;This post was inspired by Dan Croak (&lt;a href=&quot;https://twitter.com/Croaky&quot;&gt;@croaky&lt;/a&gt;)
  over at &lt;a href=&quot;https://robots.thoughtbot.com/create-a-retention-curve-with-mixpanel-and-google-sheets&quot;&gt;The Giant Robots Blog&lt;/a&gt;.
 His approach to user retention is spot-on and his walk through for user
 retention graphs are very useful for building a consumer facing product.&lt;/p&gt;
@@ -195,9 +192,7 @@ improvements are always welcome. Thanks Dan for the inspiration.&lt;/p&gt;
 		
 			<item>
 				<title>Detecting Duplicate Entries In Offerpop Campaign</title>
-        <description>&lt;h1 id=&quot;detecting-duplicate-entries-in-offerpop-campaigns&quot;&gt;Detecting Duplicate Entries in OfferPop Campaigns&lt;/h1&gt;
-
-&lt;p&gt;I wound up having to do some anomaly detection for a giveaway campaign that recently completed.
+        <description>&lt;p&gt;I wound up having to do some anomaly detection for a giveaway campaign that recently completed.
 By all accounts it was really successful! Sadly, some people didn’t play
 by the rules and entered many more times than once. One person entered
 more than 2000 times!&lt;/p&gt;
