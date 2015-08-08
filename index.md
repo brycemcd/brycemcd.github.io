@@ -1,9 +1,25 @@
 ---
 layout: default
 ---
-<div id="header">
-  <h1> Bryce McDonnell </h1>
-  <h2> Entrepreneur, Tech Leader, <3 Data </h2>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Person",
+  "address": {
+    "@type": "PostalAddress",
+      "addressLocality": "New York City",
+      "addressRegion": "NY",
+      "postalCode": "10009",
+},
+"jobTitle": "VP Technology / Chief Technology Officer",
+"name": "Bryce McDonnell",
+"url":
+"http://www.brycemcdonnell.com"
+}
+</script>
+<div id="header" itemscope itemtype="http://schema.org/Person">
+  <h1> <span itemprop="name">Bryce McDonnell</span> </h1>
+  <h2> <span itemprop="jobTitle"> Entrepreneur, Technology Leader, <3 Data </span></h2>
 </div>
 
 <div id="intro">
