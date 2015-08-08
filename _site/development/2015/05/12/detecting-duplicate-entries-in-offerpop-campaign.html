@@ -1,11 +1,10 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700|Architects+Daughter' rel='stylesheet' type='text/css'>
     <style>
       body {
-        font-family: 'Architects Daughter', cursive;
+        font-family: 'Merriweather', serif;
         font-size: 16px;
         line-height: 2em;
       }
@@ -20,13 +19,15 @@
         }
       }
 
-      section {
-        width: 50%;
-        margin: 50px auto;
+      @media(min-width: 601px) {
+        section, article {
+          width: 50%;
+          margin: 50px auto;
+        }
       }
 
-      @media (max-width: 600px) {
-        section {
+      @media(max-width: 600px) {
+        section, article {
           width: 95%;
           margin: 20px auto;
         }
@@ -53,40 +54,89 @@
           display: block;
         }
       }
+      code {
+        background-color: #CCCCCC;
+        padding: 0 5px;
+      }
+
+      .author, .pubdate, .cats {
+        font-size: small;
+        float: left;
+      }
+
+      .author, .pubdate {
+        width: 60%;
+      }
+
+      .cats {
+        margin: 0; padding: 0;
+        float: right;
+        width: 20%;
+      }
+
+      .articleBody {
+        clear: both;
+      }
     </style>
     <link type="text/css" href="/stylesheets/application.css" rel='stylesheet'/>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,700,400italic,700italic,900,900italic' rel='stylesheet' type='text/css'>
 
-    <title>Bryce McDonnell - Entrepreneur, Tech Leader, <3 Data </title>
+    <title>Detecting Duplicate Entries In Offerpop Campaign By Bryce McDonnell</title>
+
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="2015-05-12T00:00:00-04:00" name="pubdate">
+    <meta content="Offerpop does not automatically screen for duplicate entries. This script normalizes entries and then shows you the duplicates" name="description">
 
     <meta content="http://www.brycemcdonnell.com/development/2015/05/12/detecting-duplicate-entries-in-offerpop-campaign.html" property="og:url">
-    <meta content="Bryce McDonnell - Entrepreneur, Technology Leader and <3 Data" property="og:title">
-    <meta content="Bryce McDonnell is a VP Technology / Chief Technology Officer living in New York City" property="og:description">
+    <meta content="Detecting Duplicate Entries In Offerpop Campaign" property="og:title">
+    <meta content="Offerpop does not automatically screen for duplicate entries. This script normalizes entries and then shows you the duplicates" property="og:description">
+    <meta content="2015-05-12T00:00:00-04:00" name="og:pubdate">
+    <meta content="" name="og:image">
     <meta content="Bryce McDonnell's Blog" property="og:site_name">
     <meta content="website" property="og:type">
 
-    <meta name="google-site-verification" content="0H52ifs94vjyeJKgaqi7iTJg_ADcSAwD1sxTRWDF-Bs" />
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="twitter:image" content="">
+    <meta name="twitter:site" content="@brycemcd">
+    <meta name="twitter:creator" content="@brycemcd">
+    <meta name="twitter:title" content="Detecting Duplicate Entries In Offerpop Campaign">
+    <meta name="twitter:description" content="Offerpop does not automatically screen for duplicate entries. This script normalizes entries and then shows you the duplicates">
+    <meta name="twitter:card" content="summary_large_image">
 
     <link rel="alternate" type="application/rss+xml" title="RSS All Posts" href="http://www.brycemcdonnell.com/feed.xml" />
     <link rel="alternate" type="application/rss+xml" title="RSS Posts In Development" href="http://www.brycemcdonnell.com/feed.development.xml" />
     <link rel="alternate" type="application/rss+xml" title="RSS Posts In Data Science" href="http://www.brycemcdonnell.com/feed.data-science.xml" />
     <link rel="alternate" type="application/rss+xml" title="RSS Posts In Business" href="http://www.brycemcdonnell.com/feed.business.xml" />
+
+    <link rel="canonical" href="http://www.brycemcdonnell.com/development/2015/05/12/detecting-duplicate-entries-in-offerpop-campaign.html" />
+
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-      //ga('create', 'UA-62770742-1', 'auto');
-      //ga('send', 'pageview');
+      ga('create', 'UA-62770742-1', 'auto');
+      ga('send', 'pageview');
 
     </script>
   </head>
 
   <body>
-    <section>
-      <p>I wound up having to do some anomaly detection for a giveaway campaign that recently completed.
+    <article itemscope itemtype="http://schema.org/TechArticle">
+      <h1 itemprop="name"> Detecting Duplicate Entries In Offerpop Campaign </h1>
+      <ul class='cats'>
+        
+          <li itemprop="about"> development </li>
+        
+      </ul>
+      <div class='author' itemprop="author"> By Bryce McDonnell</div>
+      <div class='pubdate' itemprop="datePublished" date="2015-05-12 00:00:00 -0400"> May, 12 2015 </div>
+
+      <div class="articleBody" itemprop="articleBody">
+        <hr />
+        <p>I wound up having to do some anomaly detection for a giveaway campaign that recently completed.
 By all accounts it was really successful! Sadly, some people didn’t play
 by the rules and entered many more times than once. One person entered
 more than 2000 times!</p>
@@ -97,7 +147,15 @@ entries in just under a second:</p>
 <script src="https://gist.github.com/brycemcd/de6ef86346d035858164.js"></script>
 
 
-    </section>
+      </div>
 
+      <div id='permalink'>
+        permalink: <br />
+        <a href="http://www.brycemcdonnell.com/development/2015/05/12/detecting-duplicate-entries-in-offerpop-campaign.html"><span itemprop='url'>http://www.brycemcdonnell.com/development/2015/05/12/detecting-duplicate-entries-in-offerpop-campaign.html</span></a>
+      </div>
+    </article>
+    <script>!function(d,s,id){var
+    js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document,
+    'script', 'twitter-wjs');</script>
   </body>
 </html>

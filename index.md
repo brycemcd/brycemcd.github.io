@@ -9,8 +9,8 @@ layout: default
     "@type": "PostalAddress",
       "addressLocality": "New York City",
       "addressRegion": "NY",
-      "postalCode": "10009",
-},
+      "postalCode": "10009"
+  },
 "jobTitle": "VP Technology / Chief Technology Officer",
 "name": "Bryce McDonnell",
 "url":
