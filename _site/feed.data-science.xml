@@ -7,6 +7,167 @@
 		<atom:link href="http://www.brycemcdonnell.com/feed.data-science.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>After An Evening With Hadley</title>
+        <description>&lt;p&gt;The infamous &lt;a href=&quot;https://en.wikipedia.org/wiki/Hadley_Wickham&quot;&gt;Hadley Wickham&lt;/a&gt;
+&lt;a href=&quot;http://www.meetup.com/nyhackr/events/224749681/&quot;&gt;gave a talk&lt;/a&gt; last Friday
+entitled “Pure, predictable, pipeable: creating fluent interfaces.”
+There’s some debate about the role of pipes in writing R code and I’m
+not interested in joining the holy war. Instead, I think there are two
+rather nuanced points in his talk that are of high urgency for those
+who use R as a critical piece of their statistical workflow.&lt;/p&gt;
+
+&lt;h2 id=&quot;data-scientists-can-learn-a-lot-from-general-programmers&quot;&gt;Data Scientists can learn a lot from general programmers&lt;/h2&gt;
+
+&lt;p&gt;What struck me the most about Hadley’s talk was his emphasis on what I
+consider to be core programming principles. It’s understandable given
+that a large number of data scientists (and I’m assuming that data
+scientists are the principle users of R/R-studio) don’t have a lot of,
+if any, formal training in programming. His canonical example was that
+composing a workflow in R like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;R
+data_frame &amp;lt;- foo %&amp;gt;% bar() %&amp;gt;% baz()
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;is more readable and easier to read (and thus reason about) than:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;R
+data_frame &amp;lt;- foo( bar(baz))
+# the same as
+data_frame &amp;lt;- foo(
+  bar(
+    baz()
+  )
+)
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;I have a strong opinion that the former is much easier to read and
+reason about than the latter code block. One test that I’ve used (and
+Hadley alluded to) is the “future self” test in which you read the code
+with a perspective of “if I had no idea what problem I was working on,
+is this code descriptive enough to tell me?” In other words: “Can I
+guess what the result of this function is?” Sometimes, having a
+colleague read through it and tell you what it’s doing  (without any
+background) is a helpful litmus test.&lt;/p&gt;
+
+&lt;h3 id=&quot;why-is-this-useful&quot;&gt;Why is this useful?&lt;/h3&gt;
+
+&lt;p&gt;It may seem like overkill to go to the trouble of good composition. It’s
+not and we can rely on history as a guide.&lt;/p&gt;
+
+&lt;p&gt;My background (obviously) is in programming and I’ve had the opportunity
+to lead engineering teams. Growing junior developers into mid and senior
+level programmers has been part of the job description. New developers
+generally start with trying to “just make it work.” The tools are new
+and the lack of experience makes it hard to appreciate the effort
+involved to change the code later.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;blockquote&gt;
+    &lt;p&gt;Code is malleable. It evolves quickly. Your processes should reflect
+those traits&lt;/p&gt;
+  &lt;/blockquote&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Data science is a mix of math and code. Developing a deeper
+understanding of the code part enables the scientist to allocate more of
+her brain to the math parts of data science. When the programming effort
+is minimal, the focus on math and discovery can be maximized. Spending
+the time to make coding second nature is an investment in future
+concentration on the models.&lt;/p&gt;
+
+&lt;p&gt;I wonder if much of the syntax and public examples of R code is in this junior
+developer state. We’re doing amazing things, but we spend a lot of time
+reasoning about the code.&lt;/p&gt;
+
+&lt;p&gt;Senior developers, on the other hand, spend a lot of time reasoning
+about the correctness of the code rather than if it will work. For most
+projects, we make sure that the code runs efficiently and can be read &amp;amp;
+supported easily.&lt;/p&gt;
+
+&lt;h3 id=&quot;how-do-you-make-coding-second-nature&quot;&gt;How do you make coding second nature?&lt;/h3&gt;
+
+&lt;p&gt;Writing code is a craft and many professionals spend their entire
+careers trying to get it “right.” It’s hard, but can be learned. One of
+my favorite resources for learning object oriented programming
+principles is &lt;a href=&quot;http://amzn.to/1OLDjcZ&quot;&gt;Practical Object Oriented Design in
+Ruby&lt;/a&gt;. It’s grounded in the Ruby programming
+language, but its principles extend well beyond Ruby.&lt;/p&gt;
+
+&lt;p&gt;There are tons of online resources to make you a better coder. Check
+Udacity, Coursera, Code School and a number of others.&lt;/p&gt;
+
+&lt;p&gt;Learn a real programming language (python makes sense for data
+scientists). Once you get a good feel for it, apply those principles
+you’ve learned to writing R code.&lt;/p&gt;
+
+&lt;h2 id=&quot;r-needs-a-few-changes-to-compete-with-emerging-technologies&quot;&gt;R needs a few changes to compete with emerging technologies&lt;/h2&gt;
+
+&lt;p&gt;R itself is a functional programming language and R-Studio is a great
+IDE. R has evolved considerably in the last several years including the
+use cases for which the language is being applied.&lt;/p&gt;
+
+&lt;p&gt;Python, Scala, Ruby and a myriad of other languages are also evolving
+rapidly to meet the changing needs of what I’ll call “data programmers.”
+These are people moving data around to create new insights.&lt;/p&gt;
+
+&lt;p&gt;Hadley touched on the concern that changing the programming interface of
+R necessarily breaks legacy code. He sited this as a reason development of R packages
+doesn’t move faster. That may be true, but the field is
+moving aggressively and the language will need to do the same in order
+to remain relevant as data programmers become more commonplace.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;blockquote&gt;
+    &lt;p&gt;Breaking legacy code is a satisfactory side effect of creating a
+better future. IMHO of course&lt;/p&gt;
+  &lt;/blockquote&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Moving fast and breaking legacy code can be painful but there are
+alternatives.  Preventing catastrophic pain while the language advances would
+require a community wide adherence to &lt;a href=&quot;http://semver.org/&quot;&gt;semantic versioning&lt;/a&gt;.
+Our tools should appreciate version numbers and timelines can be built
+to advance the capabilities of the tools without leaving our legacy code
+completely broken. Many package developers currently practice this
+behavior, but a shift should occur to make it required.&lt;/p&gt;
+
+&lt;h2 id=&quot;why-pipes-are-correct&quot;&gt;Why Pipes are correct&lt;/h2&gt;
+
+&lt;p&gt;I can’t leave this post without some inflammatory remark about pipes. As
+mentioned earlier in this post, the pipes interface is much more
+readable than its purely functional counterpart.&lt;/p&gt;
+
+&lt;p&gt;As data programmers become more prominent and as our R code is written
+with the same discipline as python or java, I imagine we’ll fall back to
+the habits of great programmers. Pipes have been around forever and a
+natural tool to anyone familiar with the command line. Small utility
+scripts have been baked into the *nix operating systems and work really
+well together because we always just pass plaintext around. In the same
+way, data programmers should just be passing data frames around. This is
+not an area where we have to be clever; let’s borrow some of the
+greatest concepts of our computing history.&lt;/p&gt;
+
+&lt;h2 id=&quot;in-the-end&quot;&gt;In the end&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;learn to be good programmers so we can focus on the math&lt;/li&gt;
+  &lt;li&gt;use semantic versioning to clearly communicate the state of our tools
+and any breaking changes&lt;/li&gt;
+  &lt;li&gt;move data frames around in pipes to emulate how text is translated by
+different *nix utilities&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Thanks to &lt;a href=&quot;http://newyorktechjournal.com/about/&quot;&gt;Elliot Noma&lt;/a&gt; for taking
+&lt;a href=&quot;http://newyorktechjournal.com/2015/09/pure-predictable-pipeable-creating-fluent-interfaces-with-r/&quot;&gt;better
+notes&lt;/a&gt; than I did.&lt;/p&gt;
+</description>
+				<pubDate>Sat, 19 Sep 2015 00:00:00 -0400</pubDate>
+				<link>http://www.brycemcdonnell.com/data-science/2015/09/19/after-an-evening-with-hadley.html?utm_source=rss&amp;utm_medium=rss&amp;utm_medium=blogrss</link>
+				<guid isPermaLink="true">http://www.brycemcdonnell.com/data-science/2015/09/19/after-an-evening-with-hadley.html?utm_source=rss&amp;utm_medium=rss&amp;utm_medium=blogrss</guid>
+			</item>
+		
+			<item>
 				<title>Comparing Weather In Portland Oregon To New York City</title>
         <description>&lt;p&gt;&lt;a href=&quot;https://twitter.com/share&quot; class=&quot;twitter-share-button&quot; data-via=&quot;brycemcd&quot; data-size=&quot;large&quot; data-related=&quot;brycemcd&quot; data-text=&quot;Comparing weather data using ggplot in R&quot; data-count=&quot;none&quot; data-hashtags=&quot;rstats,weather&quot;&gt;Share This On Twitter&lt;/a&gt;&lt;/p&gt;
 

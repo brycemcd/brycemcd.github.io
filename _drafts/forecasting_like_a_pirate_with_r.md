@@ -37,4 +37,7 @@ apply forecasting like a pirate.
 
 ## Pirate Step 1 - Acquisition and Activation
 
-
+Growing a product starts with attracting attention. The growth team will
+have to come up with a mixture of different acquisition sources
+(blogger outreach, PPC, SEO, more creative channels) and instrument them
+to understand which sources are worth the investment.
