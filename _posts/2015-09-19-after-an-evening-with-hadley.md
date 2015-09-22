@@ -26,48 +26,8 @@ scientists are the principle users of R/R-studio) don't have a lot of,
 if any, formal training in programming. His canonical example was that
 composing a workflow in R like this:
 
-```R
-data_frame <- foo %>% bar() %>% baz()
-```
-
-is more readable and easier to read (and thus reason about) than:
-
-```R
-data_frame <- foo( bar(baz))
-# the same as
-data_frame <- foo(
-  bar(
-    baz()
-  )
-)
-```
-
-a real life example:
-
-```R
-taxi %>%
-  filter(tolls_amount>0) %>%
-  group_by(pickup_borough, dropoff_borough) %>%
-  summarize(num_rides_w_tolls = n(), average_toll = mean(tolls_amount)) %>%
-  ungroup() %>%
-  ungroup() %>%
-  arrange(desc(average_toll))
-```
-
-compared to:
-
-```R
-# I'm only kind of sure this works
-arrange(
-  summarize(
-    group_by(
-      filter(taxi, tolls_amount>0), pickup_borough, dropoff_borough
-    ),
-    num_rides_w_tolls = n(), average_toll = mean(tolls_amount)
-  )
-  desc(average_toll)
-)
-```
+<script
+src="https://gist.github.com/brycemcd/b35393b745620ec97e0d.js"></script>
 
 I have a strong opinion that the former is much easier to read and
 reason about than the latter code block. One test that I've used (and
