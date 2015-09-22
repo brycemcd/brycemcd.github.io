@@ -42,6 +42,33 @@ data_frame <- foo(
 )
 ```
 
+a real life example:
+
+```R
+taxi %>%
+  filter(tolls_amount>0) %>%
+  group_by(pickup_borough, dropoff_borough) %>%
+  summarize(num_rides_w_tolls = n(), average_toll = mean(tolls_amount)) %>%
+  ungroup() %>%
+  ungroup() %>%
+  arrange(desc(average_toll))
+```
+
+compared to:
+
+```R
+# I'm only kind of sure this works
+arrange(
+  summarize(
+    group_by(
+      filter(taxi, tolls_amount>0), pickup_borough, dropoff_borough
+    ),
+    num_rides_w_tolls = n(), average_toll = mean(tolls_amount)
+  )
+  desc(average_toll)
+)
+```
+
 I have a strong opinion that the former is much easier to read and
 reason about than the latter code block. One test that I've used (and
 Hadley alluded to) is the "future self" test in which you read the code
@@ -49,7 +76,9 @@ with a perspective of "if I had no idea what problem I was working on,
 is this code descriptive enough to tell me?" In other words: "Can I
 guess what the result of this function is?" Sometimes, having a
 colleague read through it and tell you what it's doing  (without any
-background) is a helpful litmus test.
+background) is a helpful litmus test. Either way, experience has shown
+that, after 6 months, I can start working on code with the %>% faster
+than with the nested functions.
 
 ### Why is this useful?
 
@@ -94,8 +123,8 @@ language, but its principles extend well beyond Ruby.
 There are tons of online resources to make you a better coder. Check
 Udacity, Coursera, Code School and a number of others.
 
-Learn a real programming language (python makes sense for data
-scientists). Once you get a good feel for it, apply those principles
+Learn another programming language (python makes sense for data
+scientists) other than R. Once you get a good feel for it, apply those principles
 you've learned to writing R code.
 
 
@@ -133,7 +162,7 @@ mentioned earlier in this post, the pipes interface is much more
 readable than its purely functional counterpart.
 
 As data programmers become more prominent and as our R code is written
-with the same discipline as python or java, I imagine we'll fall back to
+with the same discipline as python or java, I imagine we'll emulate
 the habits of great programmers. Pipes have been around forever and a
 natural tool to anyone familiar with the command line. Small utility
 scripts have been baked into the \*nix operating systems and work really

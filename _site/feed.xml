@@ -41,6 +41,33 @@ data_frame &amp;lt;- foo(
 )
 &lt;/code&gt;&lt;/p&gt;
 
+&lt;p&gt;a real life example:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;R
+taxi %&amp;gt;%
+  filter(tolls_amount&amp;gt;0) %&amp;gt;%
+  group_by(pickup_borough, dropoff_borough) %&amp;gt;%
+  summarize(num_rides_w_tolls = n(), average_toll = mean(tolls_amount)) %&amp;gt;%
+  ungroup() %&amp;gt;%
+  ungroup() %&amp;gt;%
+  arrange(desc(average_toll))
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;compared to:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;R
+# I&#39;m only kind of sure this works
+arrange(
+  summarize(
+    group_by(
+      filter(taxi, tolls_amount&amp;gt;0), pickup_borough, dropoff_borough
+    ),
+    num_rides_w_tolls = n(), average_toll = mean(tolls_amount)
+  )
+  desc(average_toll)
+)
+&lt;/code&gt;&lt;/p&gt;
+
 &lt;p&gt;I have a strong opinion that the former is much easier to read and
 reason about than the latter code block. One test that I’ve used (and
 Hadley alluded to) is the “future self” test in which you read the code
@@ -48,7 +75,9 @@ with a perspective of “if I had no idea what problem I was working on,
 is this code descriptive enough to tell me?” In other words: “Can I
 guess what the result of this function is?” Sometimes, having a
 colleague read through it and tell you what it’s doing  (without any
-background) is a helpful litmus test.&lt;/p&gt;
+background) is a helpful litmus test. Either way, experience has shown
+that, after 6 months, I can start working on code with the %&amp;gt;% faster
+than with the nested functions.&lt;/p&gt;
 
 &lt;h3 id=&quot;why-is-this-useful&quot;&gt;Why is this useful?&lt;/h3&gt;
 
@@ -97,8 +126,8 @@ language, but its principles extend well beyond Ruby.&lt;/p&gt;
 &lt;p&gt;There are tons of online resources to make you a better coder. Check
 Udacity, Coursera, Code School and a number of others.&lt;/p&gt;
 
-&lt;p&gt;Learn a real programming language (python makes sense for data
-scientists). Once you get a good feel for it, apply those principles
+&lt;p&gt;Learn another programming language (python makes sense for data
+scientists) other than R. Once you get a good feel for it, apply those principles
 you’ve learned to writing R code.&lt;/p&gt;
 
 &lt;h2 id=&quot;r-needs-a-few-changes-to-compete-with-emerging-technologies&quot;&gt;R needs a few changes to compete with emerging technologies&lt;/h2&gt;
@@ -139,7 +168,7 @@ mentioned earlier in this post, the pipes interface is much more
 readable than its purely functional counterpart.&lt;/p&gt;
 
 &lt;p&gt;As data programmers become more prominent and as our R code is written
-with the same discipline as python or java, I imagine we’ll fall back to
+with the same discipline as python or java, I imagine we’ll emulate
 the habits of great programmers. Pipes have been around forever and a
 natural tool to anyone familiar with the command line. Small utility
 scripts have been baked into the *nix operating systems and work really
