@@ -5,7 +5,8 @@ category:
 summary:
   The role of the Chief Technology Officer is different than an
   engineering leader. This article outlines a few of those differences.
-og_image_url: https://upload.wikimedia.org/wikipedia/commons/9/9b/Social_Network_Analysis_Visualization.png
+
+og_image_url: https://c2.staticflickr.com/4/3519/3462607995_150a6b2624_b.jpg
 ---
 
 I've had the pleasure of meeting with many Chief Technology Officers (CTOs) 
