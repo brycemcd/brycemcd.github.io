@@ -1,0 +1,278 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700|Architects+Daughter' rel='stylesheet' type='text/css'>
+    <style>
+      body {
+        font-family: 'Merriweather', serif;
+        font-size: 16px;
+        line-height: 2em;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+       font-family: 'Roboto', sans-serif;
+      }
+
+      @media (max-width: 600px) {
+        h1, h2 {
+          text-align: center;
+        }
+      }
+
+      @media(min-width: 601px) {
+        section, article {
+          width: 50%;
+          margin: 50px auto;
+        }
+      }
+
+      @media(max-width: 600px) {
+        section, article {
+          width: 95%;
+          margin: 20px auto;
+        }
+      }
+
+      #ego ul {
+        margin:0; padding: 0;
+        margin-top: 30px;
+        text-align: center;
+      }
+
+      @media (max-width: 600px) {
+        #ego ul {
+          margin-top: 10px;
+        }
+      }
+
+      #ego ul li {
+        display: inline-block;
+        margin: 0 20px;
+      }
+      @media (max-width: 600px) {
+        #ego ul li {
+          display: block;
+        }
+      }
+      code {
+        background-color: #CCCCCC;
+        padding: 0 5px;
+      }
+
+      .author, .pubdate, .cats {
+        font-size: small;
+        float: left;
+      }
+
+      .author, .pubdate {
+        width: 60%;
+      }
+
+      .cats {
+        margin: 0; padding: 0;
+        float: right;
+        width: 20%;
+      }
+
+      .articleBody {
+        clear: both;
+      }
+    </style>
+    <link type="text/css" href="/stylesheets/application.css" rel='stylesheet'/>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,700,400italic,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <title>The Difference Between A Chief Technology Officer And Great Engineer By Bryce McDonnell</title>
+
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="2015-10-21T00:00:00-04:00" name="pubdate">
+    <meta content="start here" name="description">
+
+    <meta content="http://www.brycemcdonnell.com/business/2015/10/21/the-difference-between-a-chief-technology-officer-and-great-engineer.html" property="og:url">
+    <meta content="The Difference Between A Chief Technology Officer And Great Engineer" property="og:title">
+    <meta content="start here" property="og:description">
+    <meta content="2015-10-21T00:00:00-04:00" name="og:pubdate">
+    <meta content="https://upload.wikimedia.org/wikipedia/commons/9/9b/Social_Network_Analysis_Visualization.png" name="og:image">
+    <meta content="Bryce McDonnell's Blog" property="og:site_name">
+    <meta content="website" property="og:type">
+
+    <meta name="twitter:image" content="https://upload.wikimedia.org/wikipedia/commons/9/9b/Social_Network_Analysis_Visualization.png">
+    <meta name="twitter:site" content="@brycemcd">
+    <meta name="twitter:creator" content="@brycemcd">
+    <meta name="twitter:title" content="The Difference Between A Chief Technology Officer And Great Engineer">
+    <meta name="twitter:description" content="start here">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="alternate" type="application/rss+xml" title="RSS All Posts" href="http://www.brycemcdonnell.com/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="RSS Posts In Development" href="http://www.brycemcdonnell.com/feed.development.xml" />
+    <link rel="alternate" type="application/rss+xml" title="RSS Posts In Data Science" href="http://www.brycemcdonnell.com/feed.data-science.xml" />
+    <link rel="alternate" type="application/rss+xml" title="RSS Posts In Business" href="http://www.brycemcdonnell.com/feed.business.xml" />
+
+    <link rel="canonical" href="http://www.brycemcdonnell.com/business/2015/10/21/the-difference-between-a-chief-technology-officer-and-great-engineer.html" />
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-62770742-1', 'auto');
+    //  ga('send', 'pageview');
+
+    </script>
+  </head>
+
+  <body>
+    <article itemscope itemtype="http://schema.org/TechArticle">
+      <h1 itemprop="name"> The Difference Between A Chief Technology Officer And Great Engineer </h1>
+      <ul class='cats'>
+        
+          <li itemprop="about"> business </li>
+        
+      </ul>
+      <div class='author' itemprop="author"> By Bryce McDonnell</div>
+      <div class='pubdate' itemprop="datePublished" date="2015-10-21 00:00:00 -0400"> October, 21 2015 </div>
+
+      <div class="articleBody" itemprop="articleBody">
+        <hr />
+        <p>I’ve had the pleasure of meeting with many Chief Technology Officers (CTOs) 
+lately.  All have been very bright individuals and I
+love living in a city this dense with smart technologists who are willing to be
+so collaborative.</p>
+
+<p>I am noticing a trend in two general types of CTO:</p>
+
+<ol>
+  <li>The engineering master</li>
+  <li>The general generalist</li>
+</ol>
+
+<p>Particularly in product or app driven companies, the CTO role is filled
+by an early engineer who is very good at writing software and
+scaling the engineering culture. The general generalist is usually a
+good engineer but has had a lot of experience in other areas of
+technology.</p>
+
+<p>Having broad technology experience, as in the case of the general generalist,
+makes for a technology leader who is better able to scale the organization.</p>
+
+<h2 id="qualities-of-the-general-generalist">Qualities of The General Generalist</h2>
+
+<p>The General Generalist is able to lead in at least three capacities in their role as
+the company’s chief technologist:</p>
+
+<ol>
+  <li>Software engineering</li>
+  <li>Internal IT, networking</li>
+  <li>Data</li>
+</ol>
+
+<p><strong>These abilities are in addition to having a strong business
+background.</strong> A CTO must be able to contribute to developing the
+strategy of the business. Big impacts in this area are key to being an
+effective CTO versus an outstanding technologist.</p>
+
+<h2 id="engineering-leadership">Engineering Leadership</h2>
+
+<p>Software engineering has become more dominant in the success of
+businesses in the last ten years or so. While it’s still relatively
+difficult to hire great engineering talent, there is a cadre of
+individuals with very strong backgrounds in engineering.</p>
+
+<p>To be a successful CTO leading engineering, the leader must be familiar
+with the engineering practices that will create competitive advantages
+with the culture of their company. Engineers write high quality and well tested
+code with a strong review process and simple release schedule.
+Appreciating and fostering these skills within the organization is
+an important leadership trait required to be an effective CTO.</p>
+
+<p>My own background is in engineering, and I think many CTOs today excel
+at this aspect of their role. Engineering is only one facet of leading the business.
+Even when the principle product is an app of some kind, the business will have to
+scale. A CTO who only has experience in engineering will struggle with
+other aspects of whole company leadership like scaling the internal
+team.</p>
+
+<h2 id="internal-it-leadership">Internal IT Leadership</h2>
+
+<p>Scaling the internal team applies to the engineering team but also the
+technology requirements of scaling the marketing, art and finance
+departments. To be really effective as a CTO means to be effective in
+leading the technology requirements of the internal office. In this
+sense, it also means leveraging technology to make internal processes
+efficient.</p>
+
+<p>Laptops, file sharing and effortless remote collaboration all contribute to
+lowered overhead and fall squarely in the realm of CTO responsibility.</p>
+
+<p>Many CTOs I know hate this aspect of technology and want to just have it
+take care of itself. I understand this view, but excelling in providing
+leadership in this area is a key difference in the VP Engineering and
+CTO. Both are executive level roles, but the VP is slightly more
+specialized.</p>
+
+<p>Managing the internal technology requirements is opportunity for creating
+competitive advantages for your company.</p>
+
+<h2 id="data-leadership">Data Leadership</h2>
+
+<p>An emerging trend for companies is to build data driven experiences. For many
+companies, managing and integrating data is a new competency and
+requires a lot of technical systems. For this reason, data wrangling
+(and sometimes data science) is a responsibility of the technology
+group of the organization.</p>
+
+<p>The ability to lead decision making with data and leverage data across
+the whole organization is probably a major differentiator in good and
+amazing CTOs these days. I predict this trend will change over time and
+managing data will become table stakes for CTOs of the future.</p>
+
+<p>New technologies are emerging that manage, transform and report on data.
+CTOs should be aware of these technologies and leverage them to drive
+value in their businesses.</p>
+
+<h2 id="exceptions">Exceptions</h2>
+
+<p>The size of the company often comes in to play when considering a CTO.
+Indeed internal IT and data concerns can fall into the realm of the
+chief information officer. While this is true of large organizations (CIOs
+aren’t usually hired in small or medium companies), I
+still think being able to lead these initiatives is an important quality
+of being a good CTO.</p>
+
+<p>Other qualities that are important to a CTO that I haven’t elaborated on
+in this article but are nonetheless important (and probably deserving of
+their own blog post):</p>
+
+<ol>
+  <li>Fostering a strong technology culture</li>
+  <li>Communicating your company’s tech culture to the public</li>
+  <li>Having an appreciation of the concerns outside the technology
+department</li>
+  <li>Identifying changes in the business and technology landscape and
+creating opportunities within the company</li>
+  <li>Business acumen like reading and managing profit &amp; loss and balance
+sheet reports</li>
+</ol>
+
+<h2 id="the-end">The End</h2>
+
+<p>Competencies of CTOs have expanded and will continue to do so. It’s one
+of the many reasons that leading technology is so invigorating.</p>
+
+<p>As always, tweet <a href="http://twitter.com/brycemcd">@brycemcd</a> with thoughts
+comments and alternative viewpoints.</p>
+
+      </div>
+
+      <div id='permalink'>
+        permalink: <br />
+        <a href="http://www.brycemcdonnell.com/business/2015/10/21/the-difference-between-a-chief-technology-officer-and-great-engineer.html"><span itemprop='url'>http://www.brycemcdonnell.com/business/2015/10/21/the-difference-between-a-chief-technology-officer-and-great-engineer.html</span></a>
+      </div>
+    </article>
+    <script>!function(d,s,id){var
+    js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document,
+    'script', 'twitter-wjs');</script>
+  </body>
+</html>
