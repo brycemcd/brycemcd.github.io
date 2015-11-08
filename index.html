@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+
 <script type="application/ld+json">
 {
   "@context": "http://schema.org",
@@ -49,30 +50,60 @@ target="_blank">LinkedIn</a>
   </ul>
 </div>
 
-## Recent Blog Posts:
+<div id="self-written-container" class="reading-writing">
 
-<ul>
-{% for post in site.posts %}
-  <li> <a href="{{ post.url }}">{{ post.title }}</a> </li>
-{% endfor %}
-</ul>
+  <h2> Recent Blog Posts: </h2>
 
-## Internet I've Been Reading
-<ul id="reading-list">
-</ul>
+  <ul id="self-written-posts">
+  {% for post in paginator.posts %}
+    <li> <a href="{{ post.url }}">{{ post.title }}</a> </li>
+  {% endfor %}
+  </ul>
+</div>
+
+<div id="reading-list-long-container" class="reading-writing">
+
+  <h2>Recent Professional Skills Reading / Watching</h2>
+
+  <ul id="reading-list-long-form">
+  </ul>
+</div>
+
+<div id="reading-list-container" class="reading-writing">
+
+  <h2> Internet I've Been Reading </h2>
+
+  <ul id="reading-list">
+  </ul>
+</div>
+
 
 <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 <script src="https://api.trello.com/1/client.js?key=f3b1593d9870a335c7acdc2844a866ea"></script>
-<script>
-  Trello.get("lists/5516b2060968d9feeeb00b8c/cards?limit=15&attachments=true", function(cards) {
-    $.each(cards, function(ix, card) {
+<script type="text/javascript">
+  function renderCardMarkup(card, showReadOn) {
       var link = $("<a>")
         .attr({href: card.attachments[0].url, target: "_blank"})
         .addClass("card")
         .text(card.name);
       var dateRead = new Date(card.dateLastActivity);
-      //link.appendTo($cards);
-      $('#reading-list').append($("<li>").append(link).append(" read: " + dateRead.toLocaleString()) );
+      var readMarkup = "";
+      if(showReadOn) {
+        readMarkup = "<div class='read-on'> read: " + dateRead.toLocaleString() + "</div>";
+      }
+      return $("<li>").append(link).append(readMarkup);
+  }
+
+  Trello.get("lists/5516b2060968d9feeeb00b8c/cards?limit=15&attachments=true", function(cards) {
+    $.each(cards, function(ix, card) {
+      $('#reading-list').append( renderCardMarkup(card, true) );
+    });
+  });
+
+  // prof skills
+  Trello.get("lists/563f8745c201e4ad1c717518/cards?limit=15&attachments=true", function(cards) {
+    $.each(cards, function(ix, card) {
+      $('#reading-list-long-form').append( renderCardMarkup(card, false) );
     });
   });
 </script>

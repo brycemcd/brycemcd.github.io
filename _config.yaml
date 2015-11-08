@@ -1,4 +1,5 @@
 url: 'http://www.brycemcdonnell.com'
+paginate: 5
 name: Bryce McDonnell
 sass:
   style: compressed
